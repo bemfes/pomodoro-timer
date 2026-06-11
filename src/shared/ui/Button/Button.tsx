@@ -6,10 +6,10 @@ interface ButtonProps {
     onClick: () => void;
 }
 
-const Button: FC<ButtonProps> = () => {
+const Button: FC<ButtonProps> = ({ children, className, onClick }) => {
     return (
-        <button>
-            
+        <button className={className} onClick={onClick}>
+            {children}
         </button>
     )
 }
