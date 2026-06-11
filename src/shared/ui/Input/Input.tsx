@@ -7,6 +7,7 @@ interface InputProps {
   labelText: string;
   type: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
 }
 
 const Input: FC<InputProps> = ({
@@ -16,11 +17,17 @@ const Input: FC<InputProps> = ({
   labelText,
   type,
   onChange,
+  placeholder,
 }) => {
   return (
     <div className={className}>
       <label htmlFor={htmlFor}>{labelText}</label>
-      <input onChange={onChange} id={id} type={type} />
+      <input
+        placeholder={placeholder}
+        onChange={onChange}
+        id={id}
+        type={type}
+      />
     </div>
   );
 };
