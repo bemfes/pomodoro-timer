@@ -1,6 +1,14 @@
 import { FC } from "react";
 
-const Input: FC = () => {
+interface InputProps {
+  className: string;
+  id: string;
+  htmlFor: string;
+  labelText: string;
+  type: string;
+}
+
+const Input: FC<InputProps> = () => {
   return (
     <div className="">
       <label htmlFor=""></label>
