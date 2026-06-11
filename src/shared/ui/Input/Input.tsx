@@ -8,11 +8,11 @@ interface InputProps {
   type: string;
 }
 
-const Input: FC<InputProps> = () => {
+const Input: FC<InputProps> = ({ className, id, htmlFor, labelText, type }) => {
   return (
-    <div className="">
-      <label htmlFor=""></label>
-      <input id="" type="" />
+    <div className={className}>
+      <label htmlFor={htmlFor}>{labelText}</label>
+      <input id={id} type={type} />
     </div>
   );
 };
