@@ -1,6 +1,12 @@
-import { FC } from "react"
+import React, { FC } from "react"
 
-const Button: FC = () => {
+interface ButtonProps {
+    children: React.ReactNode;
+    className: string;
+    onClick: () => void;
+}
+
+const Button: FC<ButtonProps> = () => {
     return (
         <button>
             
