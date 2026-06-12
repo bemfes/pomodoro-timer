@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../shared/assets/fonts/Manrope-Medium.woff2') format('woff2'),
-   url('../shared/assets/fonts/Manrope-Medium.woff') format('woff'),
-   url('../shared/assets/fonts/Manrope-Medium.ttf') format('truetype');
+  src: url('../shared/assets/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope/Manrope-Medium.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -16,9 +16,9 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../shared/assets/fonts/Manrope-SemiBold.woff2') format('woff2'),
-   url('../shared/assets/fonts/Manrope-SemiBold.woff') format('woff'),
-   url('../shared/assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+  src: url('../shared/assets/fonts/Manrope/Manrope-SemiBold.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope/Manrope-SemiBold.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -26,9 +26,9 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../shared/assets/fonts/Manrope-Bold.woff2') format('woff2'),
-   url('../shared/assets/fonts/Manrope-Bold.woff') format('woff'),
-   url('../shared/assets/fonts/Manrope-Bold.ttf') format('truetype');
+  src: url('../shared/assets/fonts/Manrope/Manrope-Bold.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope/Manrope-Bold.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
   font-weight: 700;
