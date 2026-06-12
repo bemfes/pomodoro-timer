@@ -16,6 +16,8 @@ body {
   margin: 0;
   min-width: 303px;
   min-height: 100vh;
+  color: white;
+  background: var(--purple);
 }
 
 #root {
