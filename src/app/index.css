@@ -4,6 +4,36 @@
     margin: 0;
 }
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('../shared/assets/fonts/Manrope-Medium.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope-Medium.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../shared/assets/fonts/Manrope-SemiBold.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope-SemiBold.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../shared/assets/fonts/Manrope-Bold.woff2') format('woff2'),
+   url('../shared/assets/fonts/Manrope-Bold.woff') format('woff'),
+   url('../shared/assets/fonts/Manrope-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
 :root {
     --red: #F87070;
     --blue: #6FF3F8;
