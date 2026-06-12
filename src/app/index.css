@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+:root {
+    --red: #F87070;
+    --blue: #6FF3F8;
+    --light-purple: #D981F9;
+    --dark-purple: #151932;
+    --purple: #1E2140;
+}
+
 body {
   margin: 0;
   min-width: 303px;
@@ -14,3 +22,8 @@ body {
   width: 55%;
   margin: 0 auto;
 }
+
+
+
+
+
