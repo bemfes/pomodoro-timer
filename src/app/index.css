@@ -3,3 +3,14 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+  margin: 0;
+  min-width: 303px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 55%;
+  margin: 0 auto;
+}
