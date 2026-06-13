@@ -1,8 +1,13 @@
 import { FC } from "react";
 import "./index.css";
+import PomodoroTimerPage from "@/pages/PomodoroTimerPage";
 
 const App: FC = () => {
-  return <></>;
+  return (
+    <>
+      <PomodoroTimerPage />
+    </>
+  );
 };
 
 export default App;
