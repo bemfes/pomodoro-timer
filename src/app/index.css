@@ -5,6 +5,35 @@
 }
 
 @font-face {
+  font-family: 'JetBrains';
+  src: url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Medium.woff2') format('woff2'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Medium.woff') format('woff'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-SemiBold.woff2') format('woff2'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-SemiBold.woff') format('woff'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Bold.woff2') format('woff2'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Bold.woff') format('woff'),
+   url('../shared/assets/fonts/JetBrains-Mono/JetBrainsMono-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
   font-family: 'Manrope';
   src: url('../shared/assets/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
    url('../shared/assets/fonts/Manrope/Manrope-Medium.woff') format('woff'),
