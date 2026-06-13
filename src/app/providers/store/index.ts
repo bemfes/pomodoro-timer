@@ -1,1 +1,2 @@
-export { store, RootState, AppDispatch } from "./store";
+export type { RootState, AppDispatch } from "./store";
+export { store } from "./store";
