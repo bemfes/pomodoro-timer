@@ -5,6 +5,7 @@ import styles from "./SettingsModal.module.css";
 import Modal from "@/shared/ui/Modal";
 import ChangeColor from "@/features/change-color/ui";
 import ChangeFont from "@/features/change-font/ui";
+import ChangeTimer from "@/features/change-timer/ui";
 
 const SettingsModal: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,6 +16,10 @@ const SettingsModal: FC = () => {
       </Button>
       <Modal onClick={() => setIsOpen(false)} isOpen={isOpen}>
         <p className={styles.title}>Settings</p>
+        <div>
+          <p>TIME (MINUTES)</p>
+          <ChangeTimer />
+        </div>
         <div>
           <p>FONT</p>
           <ChangeFont />
