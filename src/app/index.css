@@ -33,6 +33,37 @@
   font-display: swap;
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'Noto-Serif-Georgian';
+  src: url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Medium.woff2') format('woff2'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Medium.woff') format('woff'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Noto-Serif-Georgian';
+  src: url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-SemiBold.woff2') format('woff2'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-SemiBold.woff') format('woff'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Noto-Serif-Georgian';
+  src: url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Bold.woff2') format('woff2'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Bold.woff') format('woff'),
+   url('../shared/assets/fonts/NotoSerifGeorgian/NotoSerifGeorgian-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
 @font-face {
   font-family: 'Manrope';
   src: url('../shared/assets/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
