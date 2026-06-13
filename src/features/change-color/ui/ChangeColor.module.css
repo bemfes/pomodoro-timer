@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn svg {
+    fill: var(--purple);
+    width: 20px;
+    height: 20px;
+}
+
+.red {
+    background: var(--red);
+}
+
+.blue {
+    background: var(--blue);
+}
+
+.purple {
+    background: var(--light-purple);
+}
