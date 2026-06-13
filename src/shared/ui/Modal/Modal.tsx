@@ -6,13 +6,14 @@ interface ModalProps {
   children: React.ReactNode;
   isOpen: boolean;
   onClick: () => void;
+  className: string;
 }
 
-const Modal: FC<ModalProps> = ({ children, isOpen, onClick }) => {
+const Modal: FC<ModalProps> = ({ children, isOpen, onClick, className }) => {
   if (!isOpen) return null;
   return (
     <div className={styles.overlay}>
-      <div className={styles.modal}>
+      <div className={`${styles.modal} ${className}`}>
         <Button className={styles.close} onClick={onClick}>
           &times;
         </Button>
