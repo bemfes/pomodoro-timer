@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container input {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--purple);
+    font-weight: 600;
+    height: 35px;
+    font-size: 17px;
+}
+
+.container label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--grey);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
