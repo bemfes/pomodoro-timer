@@ -19,7 +19,9 @@ const SettingsModal: FC = () => {
         onClick={() => setIsOpen(false)}
         isOpen={isOpen}
       >
-        <p className={styles.title}>Settings</p>
+        <div className={styles.settings}>
+          <p className={styles.title}>Settings</p>
+        </div>
         <div className={`${styles.boxCol} ${styles.box}`}>
           <p className={styles.text}>TIME (MINUTES)</p>
           <ChangeTimer />
