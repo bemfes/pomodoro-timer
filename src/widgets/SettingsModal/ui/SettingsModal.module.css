@@ -13,4 +13,31 @@
     color: var(--dark-purple);
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.text {
+    color: var(--dark-purple);
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    font-size: 18px;
+}
+
+.boxRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    padding: 20px 0px;
+}
+
+.box:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.boxCol .text {
+    margin-bottom: 20px;
 }

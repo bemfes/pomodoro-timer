@@ -16,16 +16,16 @@ const SettingsModal: FC = () => {
       </Button>
       <Modal onClick={() => setIsOpen(false)} isOpen={isOpen}>
         <p className={styles.title}>Settings</p>
-        <div>
-          <p>TIME (MINUTES)</p>
+        <div className={`${styles.boxCol} ${styles.box}`}>
+          <p className={styles.text}>TIME (MINUTES)</p>
           <ChangeTimer />
         </div>
-        <div>
-          <p>FONT</p>
+        <div className={`${styles.boxRow} ${styles.box}`}>
+          <p className={styles.text}>FONT</p>
           <ChangeFont />
         </div>
-        <div>
-          <p>COLOR</p>
+        <div className={`${styles.boxRow} ${styles.box}`}>
+          <p className={styles.text}>COLOR</p>
           <ChangeColor />
         </div>
       </Modal>
