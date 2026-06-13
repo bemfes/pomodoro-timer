@@ -1,0 +1,35 @@
+.btn {
+    border-radius: 100%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    color: var(--purple);
+    font-weight: 500;
+}
+
+.jet {
+    font-family: 'JetBrains';
+}
+
+.georgian {
+    font-family: 'Noto-Serif-Georgian';
+}
+
+.manrope {
+    font-family: 'Manrope';
+}
+
+.active {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
