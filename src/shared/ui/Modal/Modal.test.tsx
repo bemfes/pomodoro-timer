@@ -4,7 +4,7 @@ import Modal from "./Modal";
 describe("Modal", () => {
   it("should render children", () => {
     render(
-      <Modal isOpen={true} onClick={jest.fn()}>
+      <Modal className="modal" isOpen={true} onClick={jest.fn()}>
         <p>modal is open</p>
       </Modal>,
     );
@@ -12,7 +12,7 @@ describe("Modal", () => {
   });
   it("should render close modal button", () => {
     render(
-      <Modal isOpen={true} onClick={jest.fn()}>
+      <Modal className="modal" isOpen={true} onClick={jest.fn()}>
         <p>modal is open</p>
       </Modal>,
     );
@@ -20,7 +20,7 @@ describe("Modal", () => {
   });
   it("should not render modal when isOpen is false", () => {
     render(
-      <Modal isOpen={false} onClick={jest.fn()}>
+      <Modal className="modal" isOpen={false} onClick={jest.fn()}>
         <p>modal is open</p>
       </Modal>,
     );
@@ -29,7 +29,7 @@ describe("Modal", () => {
   it("should invoke onClick callback when user clicks on close modal button", () => {
     const onClick = jest.fn();
     render(
-      <Modal isOpen={true} onClick={onClick}>
+      <Modal className="modal" isOpen={true} onClick={onClick}>
         <p>modal is open</p>
       </Modal>,
     );
