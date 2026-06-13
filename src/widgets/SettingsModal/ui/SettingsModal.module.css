@@ -1,0 +1,16 @@
+.open {
+    border: none;
+    background: none;
+}
+
+.open svg {
+    fill: var(--grey);
+    width: 35px;
+    height: 35px;
+}
+
+.title {
+    color: var(--dark-purple);
+    font-size: 25px;
+    font-weight: 700;
+}
