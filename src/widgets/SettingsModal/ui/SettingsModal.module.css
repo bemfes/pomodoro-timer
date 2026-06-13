@@ -41,3 +41,10 @@
 .boxCol .text {
     margin-bottom: 20px;
 }
+
+.modal {
+    background: white;
+    padding: 30px;
+    width: 40%;
+    border-radius: 15px;
+}

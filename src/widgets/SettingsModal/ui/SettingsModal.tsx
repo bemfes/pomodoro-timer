@@ -14,7 +14,11 @@ const SettingsModal: FC = () => {
       <Button className={styles.open} onClick={() => setIsOpen(true)}>
         <IconSettings />
       </Button>
-      <Modal onClick={() => setIsOpen(false)} isOpen={isOpen}>
+      <Modal
+        className={styles.modal}
+        onClick={() => setIsOpen(false)}
+        isOpen={isOpen}
+      >
         <p className={styles.title}>Settings</p>
         <div className={`${styles.boxCol} ${styles.box}`}>
           <p className={styles.text}>TIME (MINUTES)</p>
