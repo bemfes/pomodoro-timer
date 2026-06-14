@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./PomodoroTimerPage.module.css";
-import SettingsModal from "@/widgets/SettingsModal/ui";
+import SettingsModal from "@/widgets/SettingsModal";
 
 const PomodoroTimerPage: FC = () => {
   return (
