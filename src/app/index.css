@@ -110,8 +110,9 @@ body {
   min-height: 100vh;
   color: var(--white);
   background: var(--purple);
-  font-family: 'Manrope';
 }
+
+
 
 #root {
   width: 55%;
