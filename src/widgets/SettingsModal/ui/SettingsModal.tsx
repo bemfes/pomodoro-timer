@@ -4,7 +4,7 @@ import Button from "@/shared/ui/Button";
 import styles from "./SettingsModal.module.css";
 import Modal from "@/shared/ui/Modal";
 import ChangeColor from "@/features/change-color/ui";
-import ChangeFont from "@/features/change-font/ui";
+import ChangeFont from "@/features/change-font";
 import ChangeTimer from "@/features/change-timer";
 
 const SettingsModal: FC = () => {
