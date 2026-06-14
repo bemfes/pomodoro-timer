@@ -5,7 +5,7 @@ import styles from "./SettingsModal.module.css";
 import Modal from "@/shared/ui/Modal";
 import ChangeColor from "@/features/change-color/ui";
 import ChangeFont from "@/features/change-font/ui";
-import ChangeTimer from "@/features/change-timer/ui";
+import ChangeTimer from "@/features/change-timer";
 
 const SettingsModal: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
