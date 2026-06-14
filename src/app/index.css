@@ -112,7 +112,15 @@ body {
   background: var(--purple);
 }
 
-
+body[data-font="georgian"] {
+  font-family: 'Noto-Serif-Georgian';
+}
+body[data-font="manrope"] {
+  font-family: 'Manrope';
+}
+body[data-font="jet"] {
+  font-family: 'JetBrains';
+}
 
 #root {
   width: 55%;
