@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import settingsSlice from "@/entities/settings/model";
+import settingsSlice from "@/entities/settings";
 
 export const store = configureStore({
   reducer: {

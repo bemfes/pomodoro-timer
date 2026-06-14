@@ -4,6 +4,6 @@ export {
   changeLongBreak,
   changeFont,
   changeColor,
-} from "./settingsSlice";
+} from "./model/settingsSlice";
 
-export { default } from "./settingsSlice";
+export { default } from "./model/settingsSlice";

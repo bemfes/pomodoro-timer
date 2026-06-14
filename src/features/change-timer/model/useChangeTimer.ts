@@ -3,7 +3,7 @@ import {
   changeLongBreak,
   changePomodoro,
   changeShortBreak,
-} from "@/entities/settings/model";
+} from "@/entities/settings";
 import { ChangeEvent } from "react";
 
 export const useChangeTimer = () => {
