@@ -1,6 +1,6 @@
 import Input from "@/shared/ui/Input";
 import styles from "./ChangeTimer.module.css";
-import { useChangeTimer } from "../model";
+import { useChangeTimer } from "../model/useChangeTimer";
 
 const ChangeTimer = () => {
   const {
