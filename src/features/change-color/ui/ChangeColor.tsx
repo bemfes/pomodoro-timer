@@ -14,6 +14,7 @@ const ChangeColor: FC = () => {
     <div className={styles.container}>
       {colors.map((colorItem: Colors) => (
         <Button
+          key={colorItem}
           className={`${styles.btn} ${styles[colorItem]}`}
           onClick={() => handleChangeColor(colorItem)}
         >
