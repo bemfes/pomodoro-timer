@@ -1,16 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-type Colors = "red" | "blue" | "purple";
-
-type Fonts = "manrope" | "georgian" | "jet";
-
-interface InitialState {
-  pomodoro: number;
-  shortBreak: number;
-  longBreak: number;
-  color: Colors;
-  font: Fonts;
-}
+import { Colors, InitialState } from "./types";
+import { Fonts } from "./types";
 
 const initialState: InitialState = {
   pomodoro: 25,
