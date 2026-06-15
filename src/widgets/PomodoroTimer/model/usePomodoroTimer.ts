@@ -1,0 +1,39 @@
+import { changeIsRunning, goToNextMode, setTime, tick } from "@/entities/timer";
+import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks";
+import { useEffect } from "react";
+
+export const usePomodoroTimer = () => {
+  const { mode, isRunning, timeLeft } = useAppSelector(
+    (state) => state.timerReducer,
+  );
+
+  const duration = useAppSelector((state) => state.settingsReducer[mode]);
+
+  const dispatch = useAppDispatch();
+
+  const handleChangeIsRunning = () => {
+    dispatch(changeIsRunning());
+  };
+
+  useEffect(() => {
+    if (timeLeft >= 0) return;
+    dispatch(goToNextMode());
+  }, [timeLeft, dispatch]);
+
+  useEffect(() => {
+    dispatch(setTime(duration));
+  }, [mode, duration, dispatch]);
+
+  useEffect(() => {
+    if (!isRunning) return;
+
+    const timer = setInterval(() => {
+      dispatch(tick());
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [isRunning, dispatch]);
+
+  return { isRunning, timeLeft, handleChangeIsRunning };
+};
