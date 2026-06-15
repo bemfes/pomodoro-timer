@@ -1,10 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import settingsSlice from "@/entities/settings";
+import timerSlice from "@/entities/timer";
+
+const rootReducer = combineReducers({
+  settingsReducer: settingsSlice,
+  timerReducer: timerSlice,
+});
 
 export const store = configureStore({
-  reducer: {
-    settingsReducer: settingsSlice,
-  },
+  reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
