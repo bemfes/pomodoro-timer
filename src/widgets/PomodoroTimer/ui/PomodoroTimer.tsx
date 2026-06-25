@@ -5,7 +5,7 @@ import styles from "./PomodoroTimer.module.css";
 import CircleProgressBar from "@/shared/ui/CircleProgressBar";
 
 const PomodoroTimer = () => {
-  const { isRunning, timeLeft, percentage, handleChangeIsRunning } =
+  const { isRunning, timeLeft, color, percentage, handleChangeIsRunning } =
     usePomodoroTimer();
 
   return (
@@ -13,7 +13,7 @@ const PomodoroTimer = () => {
       <ChooseTimerMode />
       <CircleProgressBar
         percentage={percentage}
-        strokeColorActive="red"
+        strokeColorActive={`var(--${color})`}
         strokeColorBg="green"
         strokeWidth={12}
         radius={180}
