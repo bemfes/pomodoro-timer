@@ -1,4 +1,4 @@
-export type Colors = "red" | "blue" | "purple";
+export type Colors = "red" | "blue" | "lavender";
 
 export type Fonts = "manrope" | "georgian" | "jet";
 

@@ -6,7 +6,7 @@ import { Colors } from "@/entities/settings";
 import { useChangeColor } from "../model/useChangeColor";
 
 const ChangeColor: FC = () => {
-  const colors: Colors[] = ["red", "blue", "purple"];
+  const colors: Colors[] = ["red", "blue", "lavender"];
 
   const { color, handleChangeColor } = useChangeColor();
 
