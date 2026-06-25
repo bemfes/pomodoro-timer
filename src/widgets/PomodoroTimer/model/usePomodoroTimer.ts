@@ -9,6 +9,8 @@ export const usePomodoroTimer = () => {
 
   const duration = useAppSelector((state) => state.settingsReducer[mode]);
 
+  const { color } = useAppSelector((state) => state.settingsReducer);
+
   const dispatch = useAppDispatch();
 
   const handleChangeIsRunning = () => {
@@ -37,5 +39,5 @@ export const usePomodoroTimer = () => {
 
   const percentage = (timeLeft * 100) / duration;
 
-  return { isRunning, timeLeft, percentage, handleChangeIsRunning };
+  return { isRunning, timeLeft, color, percentage, handleChangeIsRunning };
 };
