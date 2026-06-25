@@ -35,5 +35,7 @@ export const usePomodoroTimer = () => {
     };
   }, [isRunning, dispatch]);
 
-  return { isRunning, timeLeft, handleChangeIsRunning };
+  const percentage = (timeLeft * 100) / duration;
+
+  return { isRunning, timeLeft, percentage, handleChangeIsRunning };
 };
