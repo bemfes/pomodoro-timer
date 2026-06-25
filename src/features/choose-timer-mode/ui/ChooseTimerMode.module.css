@@ -12,9 +12,20 @@
 }
 
 .active {
-    background: var(--red);
     color: var(--dark-purple);
     border-radius: 30px;
+}
+
+.red {
+    background: var(--red);  
+}
+
+.blue {
+    background: var(--blue);
+}
+
+.lavender {
+    background: var(--lavender);
 }
 
 .container {
