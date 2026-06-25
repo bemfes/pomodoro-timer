@@ -5,11 +5,16 @@ interface ButtonProps {
   children: React.ReactNode;
   className: string;
   onClick: () => void;
+  style?: React.CSSProperties;
 }
 
-const Button: FC<ButtonProps> = ({ children, className, onClick }) => {
+const Button: FC<ButtonProps> = ({ children, className, onClick, style }) => {
   return (
-    <button className={`${styles.btn} ${className}`} onClick={onClick}>
+    <button
+      style={style}
+      className={`${styles.btn} ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
