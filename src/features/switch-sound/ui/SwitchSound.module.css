@@ -1,0 +1,54 @@
+.btn {
+    width: 50px;
+    height: 24px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+
+.off {
+    background: rgb(205, 200, 200);
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    z-index: 2;
+    transition: all .2s;
+}
+
+.active::after {
+    left: calc(100% - 23px);
+    transition: all .2s;
+
+}
+
+.red {
+    background: var(--red);
+}
+.blue {
+    background: var(--blue);
+}
+.lavender {
+    background: var(--lavender);
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.text {
+    color: var(--dark-purple);
+    font-weight: 700;
+}
