@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className: string;
   onClick: () => void;
   style?: React.CSSProperties;
