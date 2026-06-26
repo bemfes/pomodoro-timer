@@ -21,3 +21,9 @@
     line-height: 1em;
     margin-bottom: 20px;
 }
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
