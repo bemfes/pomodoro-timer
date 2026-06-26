@@ -1,6 +1,7 @@
 import { changeIsRunning, goToNextMode, setTime, tick } from "@/entities/timer";
 import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks";
-import { useEffect } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import swooshSound from "@/shared/assets/sounds/swoosh-sound.mp3";
 
 export const usePomodoroTimer = () => {
   const { mode, isRunning, timeLeft } = useAppSelector(
@@ -25,6 +26,18 @@ export const usePomodoroTimer = () => {
   useEffect(() => {
     dispatch(setTime(duration));
   }, [mode, duration, dispatch]);
+
+  const soundModeChange = useMemo(() => new Audio(swooshSound), []);
+
+  const firstRender = useRef(true);
+
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    soundModeChange.play().catch(() => {});
+  }, [mode, soundModeChange]);
 
   useEffect(() => {
     if (!isRunning) return;
