@@ -19,7 +19,7 @@ const PomodoroTimer = () => {
         radius={180}
       >
         <p>{timeLeft}</p>
-        <Button className="" onClick={handleChangeIsRunning}>
+        <Button className={styles.btn} onClick={handleChangeIsRunning}>
           {isRunning ? "PAUSE" : "RUN"}
         </Button>
       </CircleProgressBar>
