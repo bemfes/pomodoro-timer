@@ -8,4 +8,5 @@ export interface InitialState {
   longBreak: number;
   color: Colors;
   font: Fonts;
+  soundOn: boolean;
 }
