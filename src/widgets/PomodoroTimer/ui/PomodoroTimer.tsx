@@ -18,7 +18,7 @@ const PomodoroTimer = () => {
         strokeWidth={12}
         radius={180}
       >
-        <p>{timeLeft}</p>
+        <p className={styles.time}>{timeLeft}</p>
         <Button className={styles.btn} onClick={handleChangeIsRunning}>
           {isRunning ? "PAUSE" : "RUN"}
         </Button>
