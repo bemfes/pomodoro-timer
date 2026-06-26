@@ -6,6 +6,7 @@ import Modal from "@/shared/ui/Modal";
 import ChangeColor from "@/features/change-color";
 import ChangeFont from "@/features/change-font";
 import ChangeTimer from "@/features/change-timer";
+import SwitchSound from "@/features/switch-sound";
 
 const SettingsModal: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -25,6 +26,10 @@ const SettingsModal: FC = () => {
         <div className={`${styles.boxCol} ${styles.box}`}>
           <p className={styles.text}>TIME (MINUTES)</p>
           <ChangeTimer />
+        </div>
+        <div className={`${styles.boxRow} ${styles.box}`}>
+          <p className={styles.text}>SOUND</p>
+          <SwitchSound />
         </div>
         <div className={`${styles.boxRow} ${styles.box}`}>
           <p className={styles.text}>FONT</p>
