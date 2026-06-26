@@ -4,6 +4,7 @@ export {
   changeLongBreak,
   changeFont,
   changeColor,
+  switchSound,
 } from "./model/settingsSlice";
 
 export type { Colors, Fonts } from "./model/types";
