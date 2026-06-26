@@ -7,7 +7,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const isDev = options.mode === "development";
 
   const assetLoader = {
-    test: /\.(png|jpg|jpeg|gif)$/i,
+    test: /\.(png|jpg|jpeg|gif|mp3)$/i,
     type: "asset/resource",
   };
 
@@ -28,7 +28,6 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     ],
   };
 
- 
   const babelLoader = {
     test: /\.tsx?$/,
     use: "babel-loader",
