@@ -33,3 +33,9 @@
     border-radius: 100%;
     background: var(--dark-purple);
 }
+
+.gradient {
+    padding: 25px;
+    border-radius: 100%;
+    background: linear-gradient(136deg, var(--dark-purple) 30%, #292D52);
+}
