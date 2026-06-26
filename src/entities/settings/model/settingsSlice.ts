@@ -30,6 +30,9 @@ const settingsSlice = createSlice({
     changeColor(state, action: PayloadAction<Colors>) {
       state.color = action.payload;
     },
+    switchSound(state) {
+      state.soundOn = !state.soundOn;
+    },
   },
 });
 
@@ -39,6 +42,7 @@ export const {
   changeLongBreak,
   changeFont,
   changeColor,
+  switchSound,
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;
