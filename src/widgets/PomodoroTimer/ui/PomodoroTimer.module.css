@@ -4,3 +4,20 @@
     align-items: center;
     gap: 30px;
 }
+
+.btn {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: .3em;
+    text-align: center;
+}
+
+.time {
+    font-size: 80px;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
