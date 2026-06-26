@@ -8,6 +8,7 @@ const initialState: InitialState = {
   longBreak: 15,
   color: "red",
   font: "manrope",
+  soundOn: true,
 };
 
 const settingsSlice = createSlice({
