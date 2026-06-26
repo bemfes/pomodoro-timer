@@ -42,7 +42,9 @@ export const usePomodoroTimer = () => {
       firstRender.current = false;
       return;
     }
-    soundModeChange.play().catch(() => {});
+    if (soundOnRef.current) {
+      soundModeChange.play().catch(() => {});
+    }
   }, [mode, soundModeChange]);
 
   useEffect(() => {
