@@ -14,7 +14,7 @@ const PomodoroTimer = () => {
       <CircleProgressBar
         percentage={percentage}
         strokeColorActive={`var(--${color})`}
-        strokeColorBg="green"
+        strokeColorBg="transparent"
         strokeWidth={12}
         radius={180}
       >
