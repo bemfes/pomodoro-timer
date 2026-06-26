@@ -10,7 +10,7 @@ export const usePomodoroTimer = () => {
 
   const duration = useAppSelector((state) => state.settingsReducer[mode]);
 
-  const { color } = useAppSelector((state) => state.settingsReducer);
+  const { color, soundOn } = useAppSelector((state) => state.settingsReducer);
 
   const dispatch = useAppDispatch();
 
@@ -30,6 +30,12 @@ export const usePomodoroTimer = () => {
   const soundModeChange = useMemo(() => new Audio(swooshSound), []);
 
   const firstRender = useRef(true);
+
+  const soundOnRef = useRef(soundOn);
+
+  useEffect(() => {
+    soundOnRef.current = soundOn;
+  }, [soundOn]);
 
   useEffect(() => {
     if (firstRender.current) {
