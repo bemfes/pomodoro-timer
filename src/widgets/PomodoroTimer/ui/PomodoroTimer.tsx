@@ -18,10 +18,12 @@ const PomodoroTimer = () => {
         strokeWidth={12}
         radius={180}
       >
-        <p className={styles.time}>{timeLeft}</p>
-        <Button className={styles.btn} onClick={handleChangeIsRunning}>
-          {isRunning ? "PAUSE" : "RUN"}
-        </Button>
+        <div className={styles.box}>
+          <p className={styles.time}>{timeLeft}</p>
+          <Button className={styles.btn} onClick={handleChangeIsRunning}>
+            {isRunning ? "PAUSE" : "RUN"}
+          </Button>
+        </div>
       </CircleProgressBar>
     </div>
   );
