@@ -12,7 +12,7 @@ interface InitialState {
 const initialState: InitialState = {
   mode: "pomodoro",
   isRunning: false,
-  timeLeft: 25,
+  timeLeft: 25 * 60,
   pomodoroCount: 0,
 };
 
