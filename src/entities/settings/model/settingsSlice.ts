@@ -1,11 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Colors, InitialState } from "./types";
 import { Fonts } from "./types";
+import { TIMER_DEFAULT_DURATIONS } from "@/shared/constants";
 
 const initialState: InitialState = {
-  pomodoro: 25,
-  shortBreak: 5,
-  longBreak: 15,
+  ...TIMER_DEFAULT_DURATIONS,
   color: "red",
   font: "manrope",
   soundOn: true,
