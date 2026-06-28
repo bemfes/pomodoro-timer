@@ -58,7 +58,19 @@ export const usePomodoroTimer = () => {
     };
   }, [isRunning, dispatch]);
 
+  const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+
+  const seconds = String(timeLeft % 60).padStart(2, "0");
+
   const percentage = (timeLeft * 100) / (duration * 60);
 
-  return { isRunning, timeLeft, color, percentage, handleChangeIsRunning };
+  return {
+    isRunning,
+    minutes,
+    seconds,
+    timeLeft,
+    color,
+    percentage,
+    handleChangeIsRunning,
+  };
 };
