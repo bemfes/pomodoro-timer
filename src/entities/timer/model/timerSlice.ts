@@ -1,3 +1,4 @@
+import { TIMER_DEFAULT_DURATIONS } from "@/shared/constants";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type TimerMode = "pomodoro" | "shortBreak" | "longBreak";
@@ -12,7 +13,7 @@ interface InitialState {
 const initialState: InitialState = {
   mode: "pomodoro",
   isRunning: false,
-  timeLeft: 25 * 60,
+  timeLeft: TIMER_DEFAULT_DURATIONS.pomodoro * 60,
   pomodoroCount: 0,
 };
 
