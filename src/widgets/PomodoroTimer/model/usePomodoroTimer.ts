@@ -1,12 +1,14 @@
 import { changeIsRunning, goToNextMode, setTime, tick } from "@/entities/timer";
 import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import swooshSound from "@/shared/assets/sounds/swoosh-sound.mp3";
 
 export const usePomodoroTimer = () => {
   const { mode, isRunning, timeLeft } = useAppSelector(
     (state) => state.timerReducer,
   );
+
+  const [hasStarted, setHasStarted] = useState<boolean>(false);
 
   const duration = useAppSelector((state) => state.settingsReducer[mode]);
 
@@ -15,6 +17,9 @@ export const usePomodoroTimer = () => {
   const dispatch = useAppDispatch();
 
   const handleChangeIsRunning = () => {
+    if (!hasStarted) {
+      setHasStarted(true);
+    }
     dispatch(changeIsRunning());
   };
 
