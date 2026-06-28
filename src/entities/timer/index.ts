@@ -10,4 +10,4 @@ export {
 
 export type { TimerMode } from "./model/timerSlice";
 
-export { TIMER_MODES } from "./model/constants";
+export { TIMER_MODES, TIMER_MODES_LABELS } from "./model/constants";

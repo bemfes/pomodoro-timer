@@ -10,3 +10,9 @@ export const TIMER_MODES: ModeItem[] = [
   { value: "shortBreak", label: "short break" },
   { value: "longBreak", label: "long break" },
 ];
+
+export const TIMER_MODES_LABELS: Record<TimerMode, string> = {
+  pomodoro: "pomodoro",
+  shortBreak: "short break",
+  longBreak: "long break",
+};
