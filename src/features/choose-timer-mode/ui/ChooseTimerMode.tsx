@@ -1,8 +1,7 @@
 import Button from "@/shared/ui/Button";
 import styles from "./ChooseTimerMode.module.css";
 import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks";
-import { changeTimerMode, TimerMode } from "@/entities/timer";
-import { TIMER_MODES } from "../model/constants";
+import { changeTimerMode, TIMER_MODES, TimerMode } from "@/entities/timer";
 
 const ChooseTimerMode = () => {
   const dispatch = useAppDispatch();
