@@ -1,5 +1,15 @@
-import { changeIsRunning, goToNextMode, setTime, tick } from "@/entities/timer";
-import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks";
+import {
+  changeIsRunning,
+  goToNextMode,
+  setTime,
+  tick,
+  TIMER_MODES_LABELS,
+} from "@/entities/timer";
+import {
+  useAppDispatch,
+  useAppSelector,
+  useChangeDocumentTitle,
+} from "@/shared/lib/hooks";
 import { useEffect, useMemo, useRef, useState } from "react";
 import swooshSound from "@/shared/assets/sounds/swoosh-sound.mp3";
 
@@ -68,6 +78,12 @@ export const usePomodoroTimer = () => {
   const seconds = String(timeLeft % 60).padStart(2, "0");
 
   const percentage = (timeLeft * 100) / (duration * 60);
+
+  const title = hasStarted
+    ? `${minutes}:${seconds} - ${TIMER_MODES_LABELS[mode]}`
+    : "Pomodoro Timer";
+
+  useChangeDocumentTitle(title);
 
   return {
     isRunning,
