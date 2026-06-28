@@ -1,7 +1,4 @@
-.btn {
-    cursor: pointer;
-}
-
 button {
     font-family: inherit;
+    cursor: pointer;
 }
