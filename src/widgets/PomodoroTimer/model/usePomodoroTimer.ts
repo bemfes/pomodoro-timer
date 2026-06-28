@@ -24,7 +24,7 @@ export const usePomodoroTimer = () => {
   }, [timeLeft, dispatch]);
 
   useEffect(() => {
-    dispatch(setTime(duration));
+    dispatch(setTime(duration * 60));
   }, [mode, duration, dispatch]);
 
   const soundModeChange = useMemo(() => new Audio(swooshSound), []);
@@ -58,7 +58,7 @@ export const usePomodoroTimer = () => {
     };
   }, [isRunning, dispatch]);
 
-  const percentage = (timeLeft * 100) / duration;
+  const percentage = (timeLeft * 100) / (duration * 60);
 
   return { isRunning, timeLeft, color, percentage, handleChangeIsRunning };
 };
