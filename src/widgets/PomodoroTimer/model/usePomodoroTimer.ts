@@ -68,7 +68,6 @@ export const usePomodoroTimer = () => {
     isRunning,
     minutes,
     seconds,
-    timeLeft,
     color,
     percentage,
     handleChangeIsRunning,
