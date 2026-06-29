@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import IconSettings from "@/shared/assets/images/icon-settings.svg";
 import Button from "@/shared/ui/Button";
 import styles from "./SettingsModal.module.css";
@@ -10,6 +10,22 @@ import SwitchSound from "@/features/switch-sound";
 
 const SettingsModal: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const fontsLoaded = useRef<boolean>(false);
+  useEffect(() => {
+    if (!isOpen || fontsLoaded.current) return;
+
+    fontsLoaded.current = true;
+
+    Promise.all([
+      document.fonts.load('500 16px "JetBrains"'),
+      document.fonts.load('600 16px "JetBrains"'),
+      document.fonts.load('700 16px "JetBrains"'),
+
+      document.fonts.load('500 16px "Noto-Serif-Georgian"'),
+      document.fonts.load('600 16px "Noto-Serif-Georgian"'),
+      document.fonts.load('700 16px "Noto-Serif-Georgian"'),
+    ]);
+  }, [isOpen]);
   return (
     <div>
       <Button className={styles.open} onClick={() => setIsOpen(true)}>
