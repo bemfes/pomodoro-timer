@@ -28,10 +28,7 @@ const CircleProgressBar: FC<CircleProgressBarProps> = ({
   const strokeDasharray = circleLength;
   const strokeDashoffset = circleLength * (1 - percentage / 100);
   return (
-    <div
-      style={{ width: radius * 2, height: radius * 2 }}
-      className={`${styles.progress} ${className}`}
-    >
+    <div className={`${styles.progress} ${className}`}>
       <svg viewBox={viewBox} className={styles.svg}>
         <circle
           fill="none"
