@@ -53,3 +53,26 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
+
+@media(max-width: 1360px) {
+    .modal {
+        width: 50%;
+    }
+}
+@media(max-width: 767px) {
+    .modal {
+        width: 70%;
+    }
+}
+@media(max-width: 575px) {
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .settings {
+        margin-bottom: 0px;
+    }
+}
