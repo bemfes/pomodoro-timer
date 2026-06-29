@@ -25,6 +25,7 @@ const PomodoroTimer = () => {
             strokeColorBg="transparent"
             strokeWidth={12}
             radius={180}
+            className={styles.bar}
           >
             <div className={styles.box}>
               <p className={styles.time}>
