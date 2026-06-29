@@ -26,3 +26,8 @@
     border: none;
 }
 
+@media(max-width: 1024px) {
+    .overlay {
+        align-items: flex-start;
+    }
+}
