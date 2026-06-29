@@ -37,3 +37,14 @@
     border-radius: 30px;
     width: fit-content;
 }
+
+@media(max-width: 575px) {
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .container {
+        gap: 10px;
+    }
+
+}
