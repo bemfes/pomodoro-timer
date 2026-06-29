@@ -1,7 +1,6 @@
-import path from "path";
 import { BuildOptions } from "./types/types";
 import type { Configuration } from "webpack";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import "webpack-dev-server";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
 
