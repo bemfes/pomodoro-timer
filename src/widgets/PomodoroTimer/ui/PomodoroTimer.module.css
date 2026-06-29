@@ -41,7 +41,27 @@
     background: linear-gradient(136deg, var(--dark-purple) 30%, #292D52);
 }
 
+
 .bar {
     width: 360px;
     height: 360px;
+}
+
+
+@media(max-width: 575px) {
+    .gradient {
+        width: 290px;
+        height: 290px;
+        padding: 22px;
+    }
+    .ring {
+        padding: 10px;
+    }
+    .time {
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+    .btn {
+        font-size: 32px;
+    }
 }
