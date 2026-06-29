@@ -41,11 +41,13 @@
     background: linear-gradient(136deg, var(--dark-purple) 30%, #292D52);
 }
 
-
-.bar {
-    width: 360px;
-    height: 360px;
+@media(min-width: 575px) {
+    .bar {
+        width: 360px;
+        height: 360px;
 }
+}
+
 
 
 @media(max-width: 575px) {
