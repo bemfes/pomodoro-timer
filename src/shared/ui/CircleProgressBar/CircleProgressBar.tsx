@@ -8,6 +8,7 @@ interface CircleProgressBarProps {
   strokeWidth: number;
   children: React.ReactNode;
   radius: number;
+  className?: string;
 }
 
 const CircleProgressBar: FC<CircleProgressBarProps> = ({
@@ -17,6 +18,7 @@ const CircleProgressBar: FC<CircleProgressBarProps> = ({
   strokeWidth,
   children,
   radius,
+  className,
 }) => {
   const circleRadius = radius - strokeWidth / 2;
   const viewBox = `0 0 ${radius * 2} ${radius * 2}`;
@@ -28,7 +30,7 @@ const CircleProgressBar: FC<CircleProgressBarProps> = ({
   return (
     <div
       style={{ width: radius * 2, height: radius * 2 }}
-      className={styles.progress}
+      className={`${styles.progress} ${className}`}
     >
       <svg viewBox={viewBox} className={styles.svg}>
         <circle
