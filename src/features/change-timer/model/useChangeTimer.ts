@@ -5,6 +5,7 @@ import {
   changeShortBreak,
 } from "@/entities/settings";
 import { ChangeEvent } from "react";
+import { useHandleTimerInput } from "./useHandleTimerInput";
 
 export const useChangeTimer = () => {
   const { pomodoro, longBreak, shortBreak } = useAppSelector(
@@ -12,6 +13,18 @@ export const useChangeTimer = () => {
   );
 
   const dispatch = useAppDispatch();
+
+  const pomodoroInput = useHandleTimerInput(pomodoro, (val) =>
+    dispatch(changePomodoro(val)),
+  );
+
+  const shortBreakInput = useHandleTimerInput(shortBreak, (val) =>
+    dispatch(changeShortBreak(val)),
+  );
+
+  const longBreakInput = useHandleTimerInput(longBreak, (val) =>
+    dispatch(changeLongBreak(val)),
+  );
 
   const handleChangePomodoro = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch(changePomodoro(Number(e.target.value)));
@@ -30,5 +43,8 @@ export const useChangeTimer = () => {
     handleChangePomodoro,
     handleChangeShortBreak,
     handleChangeLongBreak,
+    pomodoroInput,
+    shortBreakInput,
+    longBreakInput,
   };
 };
