@@ -3,43 +3,36 @@ import styles from "./ChangeTimer.module.css";
 import { useChangeTimer } from "../model/useChangeTimer";
 
 const ChangeTimer = () => {
-  const {
-    pomodoro,
-    longBreak,
-    shortBreak,
-    handleChangePomodoro,
-    handleChangeShortBreak,
-    handleChangeLongBreak,
-  } = useChangeTimer();
+  const { pomodoroInput, shortBreakInput, longBreakInput } = useChangeTimer();
 
   return (
     <div className={styles.grid}>
       <Input
         className={styles.container}
         type="number"
-        value={pomodoro}
+        value={pomodoroInput.value}
         htmlFor="pomodoro"
         id="pomodoro"
         labelText="pomodoro"
-        onChange={(e) => handleChangePomodoro(e)}
+        onChange={(e) => pomodoroInput.handleInputChange(e)}
       />
       <Input
         className={styles.container}
         type="number"
-        value={shortBreak}
+        value={shortBreakInput.value}
         htmlFor="short-break"
         id="short-break"
         labelText="short break"
-        onChange={(e) => handleChangeShortBreak(e)}
+        onChange={(e) => shortBreakInput.handleInputChange(e)}
       />
       <Input
         className={styles.container}
         type="number"
-        value={longBreak}
+        value={longBreakInput.value}
         htmlFor="long-break"
         id="long-break"
         labelText="long break"
-        onChange={(e) => handleChangeLongBreak(e)}
+        onChange={(e) => longBreakInput.handleInputChange(e)}
       />
     </div>
   );
