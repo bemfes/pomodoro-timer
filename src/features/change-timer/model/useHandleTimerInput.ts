@@ -21,5 +21,26 @@ export const useHandleTimerInput = (
     dispatchValue(blurValue);
   };
 
-  return { value, handleInputChange, handleInputBlur };
+  const handleIncrease = () => {
+    const currentValue = Number(value);
+    if (currentValue >= 60) return;
+    const finalValue = currentValue + 1;
+    setValue(finalValue.toString());
+    dispatchValue(finalValue);
+  };
+  const handleDecrease = () => {
+    const currentValue = Number(value);
+    if (currentValue <= 1) return;
+    const finalValue = currentValue - 1;
+    setValue(finalValue.toString());
+    dispatchValue(finalValue);
+  };
+
+  return {
+    value,
+    handleInputChange,
+    handleInputBlur,
+    handleIncrease,
+    handleDecrease,
+  };
 };
