@@ -9,6 +9,7 @@ interface InputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   value: string | number;
+  onBlur?: () => void;
 }
 
 const Input: FC<InputProps> = ({
@@ -20,6 +21,7 @@ const Input: FC<InputProps> = ({
   onChange,
   placeholder,
   value,
+  onBlur,
 }) => {
   return (
     <div className={className}>
@@ -30,6 +32,7 @@ const Input: FC<InputProps> = ({
         id={id}
         type={type}
         value={value}
+        onBlur={onBlur}
       />
     </div>
   );
