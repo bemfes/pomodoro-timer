@@ -15,6 +15,7 @@ const ChangeTimer = () => {
         id="pomodoro"
         labelText="pomodoro"
         onChange={(e) => pomodoroInput.handleInputChange(e)}
+        onBlur={pomodoroInput.handleInputBlur}
       />
       <Input
         className={styles.container}
@@ -24,6 +25,7 @@ const ChangeTimer = () => {
         id="short-break"
         labelText="short break"
         onChange={(e) => shortBreakInput.handleInputChange(e)}
+        onBlur={shortBreakInput.handleInputBlur}
       />
       <Input
         className={styles.container}
@@ -33,6 +35,7 @@ const ChangeTimer = () => {
         id="long-break"
         labelText="long break"
         onChange={(e) => longBreakInput.handleInputChange(e)}
+        onBlur={longBreakInput.handleInputBlur}
       />
     </div>
   );
