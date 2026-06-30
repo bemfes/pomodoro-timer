@@ -1,1 +1,1 @@
-export { default } from "./ui/ChangeTimer";
+export { default } from "./ui/ChangeTimer/ChangeTimer";
