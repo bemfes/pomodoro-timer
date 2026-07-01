@@ -26,7 +26,7 @@ const Modal: FC<ModalProps> = ({ children, isOpen, onClick, className }) => {
   if (!isOpen) return null;
 
   return (
-    <div onClick={onClick} className={styles.overlay}>
+    <div data-testid="overlay" onClick={onClick} className={styles.overlay}>
       <div
         onClick={(e) => e.stopPropagation()}
         className={`${styles.modal} ${className}`}
