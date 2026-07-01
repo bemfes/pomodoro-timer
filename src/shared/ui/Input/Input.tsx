@@ -1,7 +1,7 @@
 import { ChangeEvent, FC } from "react";
 import "./Input.module.css";
 
-interface InputProps {
+export interface InputProps {
   className: string;
   id: string;
   htmlFor: string;
