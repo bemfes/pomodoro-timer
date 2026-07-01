@@ -41,6 +41,10 @@
     height: 17px;
 }
 
+.btn:disabled .arrow {
+    fill: #808080b0;
+}
+
 @media(max-width: 991px) {
     .buttons {
         display: none;
