@@ -1,3 +1,4 @@
+import { TIMER_MAX_VALUE, TIMER_MIN_VALUE } from "@/shared/constants";
 import { ChangeEvent, useState } from "react";
 
 export const useHandleTimerInput = (
@@ -23,14 +24,14 @@ export const useHandleTimerInput = (
 
   const handleIncrease = () => {
     const currentValue = Number(value);
-    if (currentValue >= 60) return;
+    if (currentValue >= TIMER_MAX_VALUE) return;
     const finalValue = currentValue + 1;
     setValue(finalValue.toString());
     dispatchValue(finalValue);
   };
   const handleDecrease = () => {
     const currentValue = Number(value);
-    if (currentValue <= 1) return;
+    if (currentValue <= TIMER_MIN_VALUE) return;
     const finalValue = currentValue - 1;
     setValue(finalValue.toString());
     dispatchValue(finalValue);
