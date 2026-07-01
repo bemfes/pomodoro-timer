@@ -29,4 +29,20 @@ describe("Button", () => {
     );
     expect(screen.getByRole("button")).toHaveClass("btn");
   });
+  it("should be disabled when prop disabled is true", () => {
+    render(
+      <Button disabled={true} className="btn" onClick={jest.fn}>
+        click me
+      </Button>,
+    );
+    expect(screen.getByRole("button")).toBeDisabled();
+  });
+  it("should not be disabled when prop disabled is false", () => {
+    render(
+      <Button disabled={false} className="btn" onClick={jest.fn}>
+        click me
+      </Button>,
+    );
+    expect(screen.getByRole("button")).not.toBeDisabled();
+  });
 });
