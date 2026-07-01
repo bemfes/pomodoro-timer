@@ -1,1 +1,5 @@
-export { TIMER_DEFAULT_DURATIONS } from "./timer";
+export {
+  TIMER_DEFAULT_DURATIONS,
+  TIMER_MIN_VALUE,
+  TIMER_MAX_VALUE,
+} from "./timer";
