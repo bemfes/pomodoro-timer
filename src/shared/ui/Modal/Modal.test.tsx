@@ -37,4 +37,36 @@ describe("Modal", () => {
     fireEvent.click(elem);
     expect(onClick).toHaveBeenCalled();
   });
+  it("should invoke onClick callback when user presses key Escape", () => {
+    const onClick = jest.fn();
+    render(
+      <Modal className="modal" isOpen={true} onClick={onClick}>
+        <p>modal is open</p>
+      </Modal>,
+    );
+    fireEvent.keyDown(document, { key: "Escape" });
+    expect(onClick).toHaveBeenCalled();
+  });
+  it("should invoke onClick callback when user clicks the overlay", () => {
+    const onClick = jest.fn();
+    render(
+      <Modal className="modal" isOpen={true} onClick={onClick}>
+        <p>modal is open</p>
+      </Modal>,
+    );
+    const overlay = screen.getByTestId("overlay");
+    fireEvent.click(overlay);
+    expect(onClick).toHaveBeenCalled();
+  });
+  it("should not invoke onClick callback when user clicks the modal content", () => {
+    const onClick = jest.fn();
+    render(
+      <Modal className="modal" isOpen={true} onClick={onClick}>
+        <p>modal is open</p>
+      </Modal>,
+    );
+    const content = screen.getByText(/modal is open/i);
+    fireEvent.click(content);
+    expect(onClick).not.toHaveBeenCalled();
+  });
 });
