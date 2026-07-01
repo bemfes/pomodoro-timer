@@ -49,4 +49,12 @@ describe("Input", () => {
     renderInput({ type: "range" });
     expect(screen.getByRole("slider")).toBeInTheDocument();
   });
+  it("should invoke onBlur callback when input loses focus", () => {
+    const onBlur = jest.fn();
+    renderInput({ onBlur });
+    const elem = screen.getByPlaceholderText(/main color/i);
+    fireEvent.focus(elem);
+    fireEvent.blur(elem);
+    expect(onBlur).toHaveBeenCalled();
+  });
 });
