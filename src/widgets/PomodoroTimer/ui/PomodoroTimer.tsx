@@ -17,25 +17,29 @@ const PomodoroTimer = () => {
   return (
     <div className={styles.container}>
       <ChooseTimerMode />
-      <div className={styles.gradient}>
-        <div className={styles.ring}>
-          <CircleProgressBar
-            percentage={percentage}
-            strokeColorActive={`var(--${color})`}
-            strokeColorBg="transparent"
-            strokeWidth={12}
-            radius={180}
-            className={styles.bar}
-          >
-            <div className={styles.box}>
-              <p className={styles.time}>
-                {minutes}:{seconds}
-              </p>
-              <Button className={styles.btn} onClick={handleChangeIsRunning}>
-                {isRunning ? "PAUSE" : "RUN"}
-              </Button>
-            </div>
-          </CircleProgressBar>
+      <div className={styles.shadowBox}>
+        <div className={styles.lightShadow} />
+        <div className={styles.darkShadow} />
+        <div className={styles.gradient}>
+          <div className={styles.ring}>
+            <CircleProgressBar
+              percentage={percentage}
+              strokeColorActive={`var(--${color})`}
+              strokeColorBg="transparent"
+              strokeWidth={12}
+              radius={180}
+              className={styles.bar}
+            >
+              <div className={styles.box}>
+                <p className={styles.time}>
+                  {minutes}:{seconds}
+                </p>
+                <Button className={styles.btn} onClick={handleChangeIsRunning}>
+                  {isRunning ? "PAUSE" : "RUN"}
+                </Button>
+              </div>
+            </CircleProgressBar>
+          </div>
         </div>
       </div>
     </div>

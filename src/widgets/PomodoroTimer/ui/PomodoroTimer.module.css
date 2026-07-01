@@ -39,6 +39,34 @@
     padding: 25px;
     border-radius: 100%;
     background: linear-gradient(136deg, var(--dark-purple) 30%, #292D52);
+    position: relative;
+    z-index: 2;
+}
+
+.shadowBox {
+    position: relative;
+}
+
+
+.lightShadow {
+    position: absolute;
+    top: -7px;
+    left: -14px;
+    width: 350px;
+    height: 400px;
+    border-radius: 100%;
+    background: linear-gradient(136deg, #333b6d, #1E2140);
+    filter: blur(30px);
+}
+.darkShadow {
+    position: absolute;
+    bottom: 7px;
+    right: 14px;
+    width: 350px;
+    height: 400px;
+    border-radius: 100%;
+    background: linear-gradient(136deg, #030305, #0e1127);
+    filter: blur(30px);
 }
 
 @media(min-width: 575px) {
@@ -47,7 +75,6 @@
         height: 360px;
 }
 }
-
 
 
 @media(max-width: 575px) {
@@ -65,5 +92,17 @@
     }
     .btn {
         font-size: 32px;
+    }
+    .lightShadow {
+        top: 2px;
+        left: -18px;
+        width: 290px;
+        height: 275px;
+    }
+    .darkShadow {
+        bottom: 16px;
+	    right: -5px;
+        width: 218px;
+	    height: 222px;
     }
 }
