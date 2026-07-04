@@ -6,5 +6,5 @@ import React from "react";
 export function renderWithProvider(ui: React.ReactElement) {
   const store = createTestStore();
 
-  return render(<Provider store={store}>{ui}</Provider>);
+  return { store, ...render(<Provider store={store}>{ui}</Provider>) };
 }
