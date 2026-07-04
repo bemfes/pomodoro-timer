@@ -20,6 +20,8 @@ const config = {
 
     "^@/(.*)$": "<rootDir>/src/$1",
 
+    "^@config/(.*)$": "<rootDir>/config/$1",
+
     "^.+\\.(css|scss|sass)$": "identity-obj-proxy",
   },
 };
