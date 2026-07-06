@@ -10,5 +10,5 @@ export function renderHookWithProvider<T>(hook: () => T) {
     return <Provider store={store}>{children}</Provider>;
   };
 
-  return renderHook(hook, { wrapper });
+  return { store, ...renderHook(hook, { wrapper }) };
 }
