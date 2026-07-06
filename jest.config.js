@@ -15,7 +15,7 @@ const config = {
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
 
   moduleNameMapper: {
-    "^@/shared/assets/(.*)\\.(png|jpg|jpeg|gif|webp|svg)$":
+    "^@/shared/assets/(.*)\\.(png|jpg|jpeg|gif|webp|svg|mp3)$":
       "<rootDir>/config/jest/fileMock.js",
 
     "^@/(.*)$": "<rootDir>/src/$1",
