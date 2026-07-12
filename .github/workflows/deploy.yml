@@ -5,6 +5,7 @@ on:
       - main
     paths-ignore:
       - "**.md"
+      -"preview/**"
 permissions:
   contents: read
   pages: write
