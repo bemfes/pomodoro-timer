@@ -14,6 +14,12 @@
 
 🌐 [Демо проекта](https://bemfes.github.io/pomodoro-timer/)
 
+## 📸 Превью
+
+<div>
+    <img src="./preview/pomodoro-timer-preview.gif" width="450" alt="Видео-демонстрация приложения">
+</div>
+
 
 ## 🛠️ Стек
 
