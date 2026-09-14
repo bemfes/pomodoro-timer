@@ -1,6 +1,7 @@
 import { Configuration } from "webpack";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import HtmlWebpackInjectPreload from "@principalstudio/html-webpack-inject-preload";
 import { BuildOptions } from "./types/types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
@@ -15,6 +16,18 @@ export function buildPlugins(options: BuildOptions): Configuration["plugins"] {
     new HtmlWebpackPlugin({
       template: options.paths.html,
       favicon: path.resolve(options.paths.public, "tomato-favicon.svg"),
+    }),
+    new HtmlWebpackInjectPreload({
+      files: [
+        {
+          match: /\.woff2$/,
+          attributes: {
+            as: "font",
+            type: "font/woff2",
+            crossorigin: true,
+          },
+        },
+      ],
     }),
   ];
 
