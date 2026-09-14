@@ -33,6 +33,7 @@
     "@commitlint/config-conventional": "^21.0.2",
     "@eslint/js": "^9.39.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
+    "@principalstudio/html-webpack-inject-preload": "^1.2.7",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
